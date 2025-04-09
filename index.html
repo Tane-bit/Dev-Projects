@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Windows Taschenrechner</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Windows Rechner Style</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <form action="/" method="post">
-            <input type="text" name="expression" class="display" placeholder="0" required>
+  <div class="calculator">
+    <input type="text" class="display" disabled value="0" id="display" />
 
-            <div class="buttons">
-                <button name="btn" value="CE">CE</button>
-                <button name="btn" value="C">C</button>
-                <button name="btn" value="√">√</button>
-                <button name="btn" value="/">÷</button>
+    <div class="buttons">
+      <button onclick="clearEntry()">CE</button>
+      <button onclick="clearAll()">C</button>
+      <button onclick="backspace()">⌫</button>
+      <button class="operator" onclick="appendOperator('/')">÷</button>
 
-                <button name="btn" value="7">7</button>
-                <button name="btn" value="8">8</button>
-                <button name="btn" value="9">9</button>
-                <button name="btn" value="*">×</button>
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button class="operator" onclick="appendOperator('*')">×</button>
 
-                <button name="btn" value="4">4</button>
-                <button name="btn" value="5">5</button>
-                <button name="btn" value="6">6</button>
-                <button name="btn" value="-">−</button>
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button class="operator" onclick="appendOperator('-')">−</button>
 
-                <button name="btn" value="1">1</button>
-                <button name="btn" value="2">2</button>
-                <button name="btn" value="3">3</button>
-                <button name="btn" value="+">+</button>
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button class="operator" onclick="appendOperator('+')">+</button>
 
-                <button name="btn" value="0" class="zero">0</button>
-                <button name="btn" value=".">.</button>
-                <button type="submit" class="equals">=</button>
-            </div>
-        </form>
+      <button class="span-two" onclick="appendNumber('0')">0</button>
+      <button onclick="appendDecimal()">.</button>
+      <button class="equals" onclick="calculate()">=</button>
 
-        {% if result is not none %}
-        <div class="result">Ergebnis: {{ result }}</div>
-        {% endif %}
+      <button onclick="calculatePercent()">%</button>
     </div>
+
+    <div class="toggle-dark">
+      <button onclick="toggleDarkMode()"> Dark Mode umschalten</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
