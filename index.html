@@ -10,9 +10,14 @@
     <input type="text" class="display" disabled value="0" id="display" />
 
     <div class="buttons">
-      <button onclick="clearEntry()">CE</button>
-      <button onclick="clearAll()">C</button>
-      <button onclick="backspace()">⌫</button>
+      <button class="operator" onclick="calculatePercent()">%</button>
+      <button class="operator" onclick="clearEntry()">CE</button>
+      <button class="operator" onclick="clearAll()">C</button>
+      <button class="operator" onclick="backspace()">⌫</button>
+
+      <button class="operator" onclick="appendOperator()">1⁄x</button>
+      <button class="operator" onclick="appendOperator()">x²</button>
+      <button class="operator" onclick="appendOperator()">²√x</button>
       <button class="operator" onclick="appendOperator('/')">÷</button>
 
       <button onclick="appendNumber('7')">7</button>
@@ -30,17 +35,15 @@
       <button onclick="appendNumber('3')">3</button>
       <button class="operator" onclick="appendOperator('+')">+</button>
 
-      <button class="span-two" onclick="appendNumber('0')">0</button>
-      <button onclick="appendDecimal()">.</button>
-      <button class="equals" onclick="calculate()">=</button>
+      <button onclick="appendOperator()">+/-</button>
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendDecimal()">,</button>
+      <button class="operator" onclick="calculate()">=</button>
 
-      <button onclick="calculatePercent()">%</button>
-    </div>
+      <!--<button class="darkmode" onclick="DarkMode()"> <img
+      src="/icons/day-and-night.png" alt="darkmodus" sizes="" srcset=""></button>
+    </div>-->
 
-    <div class="toggle-dark">
-      <button onclick="toggleDarkMode()"> Dark Mode umschalten</button>
-    </div>
-  </div>
   <script src="script.js"></script>
 </body>
 </html>

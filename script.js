@@ -42,7 +42,6 @@ function clearEntry() {
   const parts = currentInput.split(/([\+\-\*\/])/);
   if (parts.length > 1) {
     parts.pop();
-    parts.pop();
     currentInput = parts.join('');
   } else {
     currentInput = '';

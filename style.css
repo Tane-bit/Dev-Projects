@@ -2,7 +2,7 @@ body {
    margin: 0;
    padding: 0;
    font-family: 'Segoe UI', sans-serif;
-   background-color: #e5e5e5;
+   background-color: #0a0a0a;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -50,9 +50,9 @@ body {
    background-color: #bcbcbc;
 }
 
-button.span-two {
+/*button.span-two {
    grid-column: span 2;
-}
+}*/
 
 button.span-two-rows {
    grid-row: span 2;
@@ -60,22 +60,38 @@ button.span-two-rows {
 }
 
 button.operator {
-   background-color: #f1a33c;
-   color: white;
+   background-color: #121111;
+   color: rgb(193, 193, 193);
 }
 
 button.operator:hover {
-   background-color: #e5942e;
+   background-color: #121111
+   color: rgb(255, 255, 255);
 }
 
 button.equals {
-   background-color: #4CAF50;
-   color: white;
+   background-color: #121111;
+   color: rgb(255, 255, 255);
    grid-row: span 2;
 }
 
-button.equals:hover {
-   background-color: #45a049;
-}
+/*button.darkmode {
+   background-color: #d4d4d4;
+   border: none;
+   border-radius: 10px;
+   font-size: 1.3em;
+   cursor: pointer;
+   transition: background-color 0.2s;
+   background-image: none;
+}*/
+
+/*body.darkmode .darkmode img {
+   width: 30%;
+   height: auto;
+}*/
+
+/*button.equals:hover {
+   background-color: #121111;
+}*/
 
 
