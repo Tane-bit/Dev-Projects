@@ -33,19 +33,19 @@ function appendDecimal() {
   }
 }
 
-function clearAll() {
-  currentInput = '';
-  updateDisplay();
-}
-
 function clearEntry() {
   const parts = currentInput.split(/([\+\-\*\/])/);
   if (parts.length > 1) {
-    parts.pop();
+    parts.pop(); // aktueller Wert
     currentInput = parts.join('');
   } else {
     currentInput = '';
   }
+  updateDisplay();
+}
+
+function clearAll() {
+  currentInput = '';
   updateDisplay();
 }
 
@@ -94,8 +94,70 @@ function calculatePercent() {
   }
 }
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark');
+function toggleSign() {
+  try {
+    const parts = currentInput.split(/([\+\-\*\/])/);
+    let last = parts.pop();
+    
+    if (!isNaN(last) && last !== '') {
+      if (last.startsWith('-')) {
+        last = last.slice(1);
+      } else {
+        last = '-' + last;
+      }
+      parts.push(last);
+      currentInput = parts.join('');
+      updateDisplay();
+    }
+  } catch {
+    currentInput = 'Fehler';
+    updateDisplay();
+    resetNext = true;
+  }
+}
+
+// Darkmode
+function toggleDisplayDarkMode() {
+  document.getElementById('display').classList.toggle('dark');
+}
+
+function squareRoot() {
+  try {
+    let value = eval(currentInput);
+    currentInput = Math.sqrt(value).toString();
+    updateDisplay();
+    resetNext = true;
+  } catch {
+    currentInput = 'Fehler';
+    updateDisplay();
+    resetNext = true;
+  }
+}
+
+function inverse() {
+  try {
+    let value = eval(currentInput);
+    currentInput = (1 / value).toString();
+    updateDisplay();
+    resetNext = true;
+  } catch {
+    currentInput = 'Fehler';
+    updateDisplay();
+    resetNext = true;
+  }
+}
+
+function square() {
+  try {
+    let value = eval(currentInput);
+    currentInput = Math.pow(value, 2).toString();
+    updateDisplay();
+    resetNext = true;
+  } catch {
+    currentInput = 'Fehler';
+    updateDisplay();
+    resetNext = true;
+  }
 }
 
 // Tastatursteuerung

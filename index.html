@@ -7,42 +7,45 @@
 </head>
 <body>
   <div class="calculator">
-    <input type="text" class="display" disabled value="0" id="display" />
-
+    <input type="text" class="display" id="display" readonly />
+  
     <div class="buttons">
       <button class="operator" onclick="calculatePercent()">%</button>
       <button class="operator" onclick="clearEntry()">CE</button>
       <button class="operator" onclick="clearAll()">C</button>
       <button class="operator" onclick="backspace()">⌫</button>
 
-      <button class="operator" onclick="appendOperator()">1⁄x</button>
-      <button class="operator" onclick="appendOperator()">x²</button>
-      <button class="operator" onclick="appendOperator()">²√x</button>
-      <button class="operator" onclick="appendOperator('/')">÷</button>
 
+      <button class="function" onclick="inverse()">1/x</button>
+      <button class="function" onclick="squareRoot()">²√x</button>
+      <button class="function" onclick="square()">x²</button>
+      <button class="operator" onclick="appendOperator('/')">/</button>
+  
       <button onclick="appendNumber('7')">7</button>
       <button onclick="appendNumber('8')">8</button>
       <button onclick="appendNumber('9')">9</button>
-      <button class="operator" onclick="appendOperator('*')">×</button>
-
+      <button class="operator" onclick="appendOperator('*')">*</button>
+  
       <button onclick="appendNumber('4')">4</button>
       <button onclick="appendNumber('5')">5</button>
       <button onclick="appendNumber('6')">6</button>
-      <button class="operator" onclick="appendOperator('-')">−</button>
-
+      <button class="operator" onclick="appendOperator('-')">-</button>
+  
       <button onclick="appendNumber('1')">1</button>
       <button onclick="appendNumber('2')">2</button>
       <button onclick="appendNumber('3')">3</button>
       <button class="operator" onclick="appendOperator('+')">+</button>
 
-      <button onclick="appendOperator()">+/-</button>
-      <button onclick="appendNumber('0')">0</button>
-      <button onclick="appendDecimal()">,</button>
-      <button class="operator" onclick="calculate()">=</button>
+      <button onclick="toggleSign()">+/-</button>
+      <button class="span-two" onclick="appendNumber('0')">0</button>
+      <button onclick="appendDecimal()">.</button>
+      <button class="equals" onclick="calculate()">=</button>
 
-      <!--<button class="darkmode" onclick="DarkMode()"> <img
-      src="/icons/day-and-night.png" alt="darkmodus" sizes="" srcset=""></button>
-    </div>-->
+      <button class="darkmode" onclick="toggleDisplayDarkMode()">🌓</button>
+
+    </div>
+  </div>
+  
 
   <script src="script.js"></script>
 </body>

@@ -28,6 +28,7 @@ body {
    background-color: #ffffff;
    border-radius: 10px;
    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s, color 0.3s;
 }
 
 .buttons {
@@ -50,10 +51,6 @@ body {
    background-color: #bcbcbc;
 }
 
-/*button.span-two {
-   grid-column: span 2;
-}*/
-
 button.span-two-rows {
    grid-row: span 2;
    height: 100%;
@@ -65,33 +62,28 @@ button.operator {
 }
 
 button.operator:hover {
-   background-color: #121111
-   color: rgb(255, 255, 255);
+   background-color: #121111;
+   color: #000000;
 }
 
 button.equals {
    background-color: #121111;
-   color: rgb(255, 255, 255);
-   grid-row: span 2;
+   color: rgb(193, 193, 193);
 }
 
-/*button.darkmode {
-   background-color: #d4d4d4;
-   border: none;
-   border-radius: 10px;
-   font-size: 1.3em;
-   cursor: pointer;
-   transition: background-color 0.2s;
-   background-image: none;
-}*/
+.display.dark {
+   background-color: #1a1a1a;
+   color: #00ffcc;
+   text-shadow: 0 0 2px #00ffcc;
+   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
 
-/*body.darkmode .darkmode img {
-   width: 30%;
-   height: auto;
-}*/
-
-/*button.equals:hover {
+button.function {
    background-color: #121111;
-}*/
+   color: rgb(193, 193, 193);
+}
 
+button.function:hover {
+   background-color: #7e7e7e;
+}
 
