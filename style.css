@@ -22,7 +22,7 @@ body {
    height: 80px;
    font-size: 2.5em;
    text-align: right;
-   padding: 10px;
+   padding: 0px;
    margin-bottom: 20px;
    border: none;
    background-color: #ffffff;
@@ -48,7 +48,8 @@ body {
 }
 
 .buttons button:hover {
-   background-color: #bcbcbc;
+   background-color: #000000;
+   color: #d4d4d4;
 }
 
 button.span-two-rows {
@@ -57,18 +58,23 @@ button.span-two-rows {
 }
 
 button.operator {
-   background-color: #121111;
-   color: rgb(193, 193, 193);
+   background-color: #090909;
+   color: #d4d4d4;
 }
 
 button.operator:hover {
-   background-color: #121111;
+   background-color: #d4d4d4;
    color: #000000;
 }
 
 button.equals {
-   background-color: #121111;
-   color: rgb(193, 193, 193);
+   background-color: #000000;
+   color: #d4d4d4;
+}
+
+button.equals:hover {
+   background-color: #d4d4d4;
+   color: #000000;
 }
 
 .display.dark {
@@ -79,11 +85,12 @@ button.equals {
 }
 
 button.function {
-   background-color: #121111;
-   color: rgb(193, 193, 193);
+   background-color: #000000;
+   color: #d4d4d4;
 }
 
 button.function:hover {
-   background-color: #7e7e7e;
+   background-color: #d4d4d4;
+   color: #000000;
 }
 
